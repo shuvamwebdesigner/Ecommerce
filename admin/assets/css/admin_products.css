@@ -1,0 +1,275 @@
+/* assets/css/admin_products.css - Stylish styles for admin_products.php */
+
+/* Filters */
+.filters {
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-form input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.filter-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-form button:hover {
+    background-color: #0056b3;
+}
+
+.clear-filter {
+    color: #dc3545;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.clear-filter:hover {
+    text-decoration: underline;
+}
+
+/* Add Product Form */
+.add-product-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.add-product-form h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.add-product-form form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.add-product-form input, .add-product-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-product-form textarea {
+    resize: vertical;
+    min-height: 80px;
+    grid-column: 1 / -1;
+}
+
+.add-product-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: 1 / -1;
+}
+
+.add-product-form button:hover {
+    background-color: #218838;
+}
+
+/* File inputs in forms */
+.add-product-form input[type="file"], .edit-form input[type="file"] {
+    margin-bottom: 10px;
+}
+.add-product-form input[type="file"]:focus, .edit-form input[type="file"]:focus {
+    outline: 2px solid #007bff;
+}
+
+/* Products Table Container */
+.products-table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Admin Table */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.admin-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.edit-btn {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.edit-form {
+    display: none;
+    background-color: #f8f9fa;
+}
+
+.edit-form form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 15px;
+}
+
+.edit-form input, .edit-form textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.edit-form textarea {
+    min-height: 60px;
+    grid-column: 1 / -1;
+}
+
+.edit-form button {
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-form button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.no-products {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* Messages */
+.admin-message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.admin-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.admin-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-form input {
+        width: 100%;
+    }
+    
+    .add-product-form form {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-table {
+        font-size: 14px;
+    }
+    
+    .admin-table th, .admin-table td {
+        padding: 10px;
+    }
+    
+    .edit-form form {
+        grid-template-columns: 1fr;
+    }
+}
