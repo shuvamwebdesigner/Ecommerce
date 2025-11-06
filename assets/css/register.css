@@ -1,0 +1,231 @@
+/* assets/css/register.css - Stylish register */
+
+/* Register Container */
+.register-container {
+    position: relative;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.register-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    z-index: 1;
+}
+
+.register-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.register-form-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-form-card {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    padding: 40px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register-header h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.register-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.register-message {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.register-message.error {
+    background: #fee;
+    color: #c33;
+    border: 1px solid #fcc;
+}
+
+.register-message.success {
+    background: #efe;
+    color: #363;
+    border: 1px solid #cfc;
+}
+
+.register-message i {
+    margin-right: 10px;
+}
+
+.register-form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: #764ba2;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.8);
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+    outline: none;
+}
+
+.form-options {
+    margin-bottom: 20px;
+}
+
+.agree-terms {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.agree-terms input {
+    width: 25px;
+    margin-right: 8px;
+    margin-top: 2px;
+}
+
+.agree-terms a {
+    color: #764ba2;
+    text-decoration: none;
+}
+
+.agree-terms a:hover {
+    text-decoration: underline;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #764ba2, #667eea);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
+}
+
+.register-btn i {
+    margin-right: 8px;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-footer p {
+    color: #666;
+    font-size: 14px;
+}
+
+.register-footer a {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-footer a:hover {
+    color: #667eea;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .register-form-card {
+        padding: 30px 20px;
+    }
+    
+    .register-header h1 {
+        font-size: 24px;
+    }
+    
+    .register-btn {
+        padding: 12px;
+    }
+}
