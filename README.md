@@ -37,3 +37,6 @@ A simple, secure e-commerce platform built with PHP, MySQL, and Bootstrap. This 
 - **As a User: Register/login, browse products, add to cart, and checkout.**
 - **As an Admin: Log in with admin credentials, access /admin to manage inventory.**
 - **Demo Data: Sample products and users are included in the database file.**
+
+## Demo Video
+- **Google Drive link:** 
