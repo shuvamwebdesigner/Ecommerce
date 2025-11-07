@@ -39,4 +39,4 @@ A simple, secure e-commerce platform built with PHP, MySQL, and Bootstrap. This 
 - **Demo Data: Sample products and users are included in the database file.**
 
 ## Demo Video
-- **Google Drive link:** 
+- **Google Drive link:** https://drive.google.com/file/d/1esAW3alglgj-oxa43K2oNdWHs8wRyDb-/view?usp=drive_link
